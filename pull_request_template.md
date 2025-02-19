@@ -20,18 +20,27 @@
 <!-- 1. Main changes: New features, modules, fixes, or refactoring -->
 <!-- 2. UI：見た目の変更点について、変更前後のスクリーンショットや動画を添付します -->
 
-## 動作確認（How to Test）
-<!-- レビュアーが動作確認をスムーズに行えるよう、確認手順を具体的に記載します -->
-<!-- 1. 必要な事前条件 -->
-<!-- 2. テスト環境での操作手順 -->
-
-<!-- Provide clear steps for reviewers to test the changes -->
-<!-- 1. Prerequisites -->
-<!-- 2. Test steps in the test environment -->
+## 事前条件（Prerequisites）
+<!-- レビュアーが動作確認をスムーズに行えるよう、前もって必要な情報があれば記載します -->
+<!-- In order to facilitate smooth testing by reviewers, list any necessary information in advance -->
+<!-- 例 / Example:
+1. FeatureToggle
+2. 他リポジトリの開発中ブランチ / Development branch of another repository
+3. 特殊な再現手順など / Special reproduction steps, etc.
+-->
 
 ## 影響範囲（Impact）
-<!-- この変更が他の機能やシステム全体に与える影響を記載します -->
-<!-- Describe how this change might affect other features or the system as a whole -->
+### 対象ユーザー（Affected Users）
+<!-- 変更によって影響を与えるユーザーを記載します -->
+<!-- List the users affected by this change -->
+
+### 接点（Touchpoints）
+<!-- 変更によって影響を与えるユーザーとの接点（画面、メールなど）を記載します -->
+<!-- Specify the touchpoints with users (e.g., screens, emails) that are affected by the change -->
+
+### 機能（Features）
+<!-- 変更によって影響を与えるユーザーへの提供機能を記載します -->
+<!-- Describe the features provided to users that are impacted by this change -->
 
 ## テスト内容（Test Plan）
 <!-- 実施したテストの詳細を記載します※項目が多ければ外部ファイルでも可 -->
