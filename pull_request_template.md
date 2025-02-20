@@ -32,7 +32,7 @@
 ## 影響範囲（Impact）
 ### 対象ユーザー（Affected Users）
 <!-- 変更によって影響を与えるユーザーを記載します -->
-<!-- List the users affected by this change -->
+<!-- List the users who will be affected by this change -->
 
 ### 接点（Touchpoints）
 <!-- 変更によって影響を与えるユーザーとの接点（画面、メールなど）を記載します -->
