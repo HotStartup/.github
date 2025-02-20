@@ -40,7 +40,7 @@
 
 ### 機能（Features）
 <!-- 変更によって影響を与えるユーザーへの提供機能を記載します -->
-<!-- Describe the features provided to users that are impacted by this change -->
+<!-- Describe the features that will be affected by this change -->
 
 ## テスト内容（Test Plan）
 <!-- 実施したテストの詳細を記載します※項目が多ければ外部ファイルでも可 -->
