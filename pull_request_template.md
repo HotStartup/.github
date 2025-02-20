@@ -36,7 +36,7 @@
 
 ### 接点（Touchpoints）
 <!-- 変更によって影響を与えるユーザーとの接点（画面、メールなど）を記載します -->
-<!-- Specify the touchpoints with users (e.g., screens, emails) that are affected by the change -->
+<!-- List the user touchpoints (e.g., screens, emails) that will be affected by this change -->
 
 ### 機能（Features）
 <!-- 変更によって影響を与えるユーザーへの提供機能を記載します -->
