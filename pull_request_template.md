@@ -22,7 +22,7 @@
 
 ## 事前条件（Prerequisites）
 <!-- レビュアーが動作確認をスムーズに行えるよう、前もって必要な情報があれば記載します -->
-<!-- In order to facilitate smooth testing by reviewers, list any necessary information in advance -->
+<!-- To facilitate a smooth review process, list all necessary information in advance -->
 <!-- 例 / Example:
 1. FeatureToggle
 2. 他リポジトリの開発中ブランチ / Development branch of another repository
