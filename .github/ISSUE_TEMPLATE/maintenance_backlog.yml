@@ -1,0 +1,104 @@
+name: 保守運用看板用（プロダクトが抱える問題）
+description: 保守運用看板用に追加する場合に利用。プロダクトが抱える問題にだけ使ってください。タスクは追加しないように。
+projects: ["HotStartup/46"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        [保守運用看板](https://github.com/orgs/HotStartup/projects/46) に自動追加されます。
+        看板への書き込み権限がない場合は追加されないため、その場合は手動で追加してください。
+
+        **書くのは「プロダクトが抱える問題」だけです。**
+        「○○を実装する」「○○を調査する」「○○に移行する」のような、やること（タスク）は起票しないでください。
+        すでに何をするか決まっている作業は、この看板には追加しないでください。
+
+        書けない欄は空欄にせず「不明」「未計測」「未検証（理由）」と明記してください。
+        確認していないことを確認済みの事実として書かないでください。判断を誤らせます。
+
+  - type: textarea
+    id: current
+    attributes:
+      label: 現象（いまどうなってるの）
+      description: どの画面・どの操作で、どういう条件のときに何が起きるか。ユーザーに見える挙動で書いてください。該当コードが分かっていれば `ファイル:行番号` も添えてください。
+      placeholder: |
+        <どの画面・どの操作で、どういう条件のときに何が起きるか>
+
+        ユーザーに表示されるのは次の文言だけで、何が原因で次に何をすればよいのか分からない。
+
+        ```
+        <実際に表示されるメッセージ>
+        ```
+    validations:
+      required: true
+
+  - type: textarea
+    id: ideal
+    attributes:
+      label: 理想（どうなるべきなの）
+      description: 本来あるべきユーザー体験・データ状態を書いてください。どう直すか（実装方針・修正案）は書かなくて構いません。
+      placeholder: |
+        - <失敗する条件のときは、そもそも選択できないようにする など>
+        - <エラー時もコードではなく日本語の説明を表示する など>
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 問題（それで誰がどう困るの）
+      description: 困る人（エンドユーザー／ページオーナー／ショップオーナー／CS／開発）と、その困り方を書いてください。「誰も困っていない」なら、この看板に載せる必要があるか一度考えてください。
+      placeholder: |
+        - エンドユーザー: <どう困るか>
+        - ページオーナー: <どう困るか>
+        - CS: <どう困るか>
+    validations:
+      required: true
+
+  - type: textarea
+    id: scale
+    attributes:
+      label: 影響規模（件数、金額など）
+      description: 件数・影響ユーザー数・金額・期間を、数えた根拠つきで書いてください。数えていないものは「未計測」と書いてください。データ補正が必要そうかも分かれば書いてください。
+      placeholder: |
+        - <期間> で N件（うち N件は同一ユーザーの連続リトライ）
+        - 影響ユーザー数: N
+        - 金額: <失注額・返金額など。分からなければ「未計測」>
+        - データ補正の要否: 必要 / 不要 / 不明
+    validations:
+      required: true
+
+  - type: dropdown
+    id: ongoing
+    attributes:
+      label: 今も起きているか
+      description: 確認していない場合は「不明」を選んでください。「いいえ」の場合は、何によって解消したのかを現象欄に書いてください。
+      options:
+        - はい（現在も発生中）
+        - いいえ（すでに解消済み）
+        - 不明（確認できていない）
+    validations:
+      required: true
+
+  - type: dropdown
+    id: hemostasis
+    attributes:
+      label: 止血の必要があるか
+      description: 根本対応を待たずに応急処置（データ補正・機能停止・暫定パッチ）が必要かどうか。「必要」の場合は、何をどこまでやれば止まるかを影響規模欄に書いてください。
+      options:
+        - 必要（根本対応を待てない）
+        - 不要（根本対応まで待てる）
+        - 判断できない
+    validations:
+      required: true
+
+  - type: textarea
+    id: frequency
+    attributes:
+      label: 発生頻度
+      description: 「条件を満たしたときの再現率」と「その条件に入る頻度」を分けて書いてください。確認元（Sentry・アプリログ・DB など）も添えてください。
+      placeholder: |
+        - 条件を満たすと100%再現 / タイミング依存で再現条件は未確定
+        - 条件に入る頻度: <頻度と、そう判断した根拠>
+        - 確認元: <Sentry の検索条件と件数／アプリログ／DB のクエリ結果>
+    validations:
+      required: true
