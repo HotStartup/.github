@@ -102,3 +102,26 @@ body:
         - 確認元: <Sentry の検索条件と件数／アプリログ／DB のクエリ結果>
     validations:
       required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+
+        **priority score は本文に書かないでください。手で決めた数値を入れないでください。**
+
+        看板の `priority score` フィールドは、[enabling-kata](https://github.com/HotStartup/enabling-kata) の
+        Claude Code コマンド `/issue-prioritize` が算出して書き込みます。
+        **誰がやっても同じ値になること**が目的の仕組みなので、印象で付けた数値を混ぜると前提が崩れます。
+
+        起票したら、enabling-kata を導入した環境で次を実行してください。
+
+        ```
+        /issue-prioritize <リポジトリ名>#<この issue の番号> --write
+        ```
+
+        採点の判定材料は、上の **影響規模 / 今も起きているか / 止血の必要があるか / 発生頻度** の4欄です。
+        **本文に事実が無く、インシデントページや Sentry のリンクだけが貼られている issue は採点できません**（起票者に差し戻します）。
+
+        - 手順書（係数・閾値・採点の手順）: https://github.com/HotStartup/enabling-kata/blob/main/skills/issue-prioritize/SKILL.md
+        - `Priority`（単一選択）は API から書けないため、算出後に人が手で設定します
