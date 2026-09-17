@@ -124,4 +124,4 @@ body:
         **本文に事実が無く、インシデントページや Sentry のリンクだけが貼られている issue は採点できません**（起票者に差し戻します）。
 
         - 手順書（係数・閾値・採点の手順）: https://github.com/HotStartup/enabling-kata/blob/main/skills/issue-prioritize/SKILL.md
-        - 止血が必要と判定された issue には `出血中` ラベルが付きます（`/issue-backlog` が付与）
+        - 止血が必要と `/issue-prioritize` が判定した場合、止血用 issue に `出血中` ラベルを付けます（この経路では付けるのは人です）
